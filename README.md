@@ -25,11 +25,6 @@ sudo certbot --nginx -d yourdomain.com
 ## Nginx 설정
 
 ```ssh
-// sudo vi /etc/nginx/sites-available/yourdomain.com.conf
-// sudo ln -s /etc/nginx/sites-available/yourdomain.com.conf /etc/ nginx/sites-enabled/yourdomain.com.conf
-```
-
-```ssh
 sudo vi /etc/nginx/sites-enabled/yourdomain.com.conf
 
 server {
