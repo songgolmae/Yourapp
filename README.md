@@ -93,8 +93,8 @@ sudo vi /etc/systemd/system/yourapp.service
 Description=ASP.NET Core 3.0 yourapp
 
 [Service]
-WorkingDirectory=/home/ubuntu/yourapp
-ExecStart=/usr/bin/dotnet /home/ubuntu/yourapp/yourapp.dll
+WorkingDirectory=/var/www/yourapp
+ExecStart=/usr/bin/dotnet /var/www/yourapp/Yourapp.dll
 Restart=always
 # Restart service after 10 seconds if the dotnet service crashes:
 RestartSec=10
