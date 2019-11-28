@@ -1,6 +1,6 @@
 # Ubuntu 18.04 에서 AspNetCore 3.0 설치 및 https 웹앱 배포
 
-## 무료 도메인 만들기
+## 무료 도메인 만들기 (도메인이 필요합니다)
 
 ```html
 https://www.freenom.com/
