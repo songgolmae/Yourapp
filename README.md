@@ -1,4 +1,4 @@
-# Ubuntu 18.04 에서 AspNetCore 3.0 SSL 설치/배포
+# Ubuntu 18.04 에서 AspNetCore 3.0 SSL 설치 및 웹앱 배포
 
 ## 무료 도메인 만들기
 
