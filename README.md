@@ -2,8 +2,9 @@
 
 ## 선행 작업
 
-* 도메인이 필요합니다. (무료도메인을 만드려면 https://www.freenom.com/)
-* AWS 라이트세일을 사용할 수 있어야 합니다. (https://lightsail.aws.amazon.com/ls/webapp/home/instances)
+* 도메인이 필요합니다. (무료도메인을 만드려면 <https://www.freenom.com>)
+* AWS 라이트세일을 사용할 수 있어야 합니다. (<https://lightsail.aws.amazon.com/ls/webapp/home/instances>)
+* AWS 라이트세일 네트워크 방화벽 443 포트를 열어준다.
 
 ## Nginx 설치
 
