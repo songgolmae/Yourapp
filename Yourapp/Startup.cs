@@ -28,9 +28,9 @@ namespace Yourapp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // "MySQL": "server=localhost;port=3306;database=;user=;password=;",
-            // "PostgreSQL": "Host=localhost;Database=;Username=root;Password=",
-            // "SQLite": "Data Source=yourappdb.db",
+            // "MySQL": "server=db;port=3306;database=;user=;password=;",
+            // "PostgreSQL": "Host=db;Database=;Username=root;Password=",
+            // "SQLite": "Data Source=yourapp.db",
             // secrets.json
             // "ConnectionStrings": {
             //     "DefaultConnection": "server=db;port=3306;database=yourapp;user=yourapp;password=yourapp;"
