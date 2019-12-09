@@ -11,10 +11,10 @@ COPY ["Yourapp/Yourapp.csproj", "Yourapp/"]
 RUN dotnet restore "Yourapp/Yourapp.csproj"
 COPY . .
 WORKDIR "/src/Yourapp"
-RUN dotnet build "Yourapp.csproj" -c Release -o /app/build
+RUN dotnet build "Yourapp.csproj" -c Debug -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Yourapp.csproj" -c Release -o /app/publish
+RUN dotnet publish "Yourapp.csproj" -c Debug -o /app/publish
 
 FROM base AS final
 WORKDIR /app
