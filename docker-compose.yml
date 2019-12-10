@@ -3,7 +3,7 @@ version: '3.4'
 services:
   db:
     image: mariadb:10.4.10
-    container_name: DB
+    container_name: mariadb
     volumes:
       - mysql_data:/var/lib/mysql   
     ports:
@@ -15,10 +15,12 @@ services:
       MYSQL_PASSWORD: yourapp!
   yourapp:
     image: ${DOCKER_REGISTRY-}yourapp
+    container_name: yourapp
     build:
       context: .
       dockerfile: Yourapp/Dockerfile
     depends_on:
       - db
 volumes:
-    mysql_data: {}
+    mysql_data:
+        driver: local
