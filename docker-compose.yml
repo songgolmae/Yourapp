@@ -2,17 +2,17 @@ version: '3.4'
 
 services:
   db:
-    image: mariadb
+    image: mariadb:10.4.10
+    container_name: DB
     volumes:
-      - dbdata:/var/lib/mysql   
+      - mysql_data:/var/lib/mysql   
     ports:
       - "3306:3306"          
-    restart: always 
     environment:
       MYSQL_ROOT_PASSWORD: root!
       MYSQL_DATABASE: yourapp
       MYSQL_USER: yourapp
-      MYSQL_PASSWORD: yourapp
+      MYSQL_PASSWORD: yourapp!
   yourapp:
     image: ${DOCKER_REGISTRY-}yourapp
     build:
@@ -21,4 +21,4 @@ services:
     depends_on:
       - db
 volumes:
-    dbdata: {}
+    mysql_data: {}
