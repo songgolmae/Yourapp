@@ -9,20 +9,20 @@ using Yourapp.Data;
 namespace Yourapp.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191113111759_InitCreate")]
-    partial class InitCreate
+    [Migration("00000000000000_CreateIdentitySchema")]
+    partial class CreateIdentitySchema
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.0.0")
+                .HasAnnotation("ProductVersion", "3.1.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("varchar(95) CHARACTER SET utf8mb4");
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -59,7 +59,7 @@ namespace Yourapp.Data.Migrations
 
                     b.Property<string>("RoleId")
                         .IsRequired()
-                        .HasColumnType("varchar(95) CHARACTER SET utf8mb4");
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.HasKey("Id");
 
@@ -71,7 +71,7 @@ namespace Yourapp.Data.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("varchar(95) CHARACTER SET utf8mb4");
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
@@ -146,7 +146,7 @@ namespace Yourapp.Data.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("varchar(95) CHARACTER SET utf8mb4");
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.HasKey("Id");
 
@@ -158,19 +158,17 @@ namespace Yourapp.Data.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("varchar(128) CHARACTER SET utf8mb4")
-                        .HasMaxLength(128);
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.Property<string>("ProviderKey")
-                        .HasColumnType("varchar(128) CHARACTER SET utf8mb4")
-                        .HasMaxLength(128);
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("varchar(95) CHARACTER SET utf8mb4");
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.HasKey("LoginProvider", "ProviderKey");
 
@@ -182,10 +180,10 @@ namespace Yourapp.Data.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("varchar(95) CHARACTER SET utf8mb4");
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.Property<string>("RoleId")
-                        .HasColumnType("varchar(95) CHARACTER SET utf8mb4");
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.HasKey("UserId", "RoleId");
 
@@ -197,15 +195,13 @@ namespace Yourapp.Data.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("varchar(95) CHARACTER SET utf8mb4");
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("varchar(128) CHARACTER SET utf8mb4")
-                        .HasMaxLength(128);
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.Property<string>("Name")
-                        .HasColumnType("varchar(128) CHARACTER SET utf8mb4")
-                        .HasMaxLength(128);
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.Property<string>("Value")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
