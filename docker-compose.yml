@@ -3,15 +3,14 @@ version: '3.4'
 services:
   db:
     image: mysql:5.7
-    container_name: mysqldb
     ports:
       - "3306:3306"          
     restart: always 
     environment:
       MYSQL_ROOT_PASSWORD: root!
       MYSQL_DATABASE: yourapp
-      MYSQL_USER: dbuser
-      MYSQL_PASSWORD: dbuser!
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: dev!
     volumes:
       - mysqldata:/var/lib/mysql
   yourapp:
